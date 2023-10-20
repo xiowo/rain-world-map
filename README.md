@@ -1,11 +1,11 @@
-# 雨世界地图(简体中文)
+## 雨世界地图(简体中文)
 ### 介绍
 
-一个源于 https://github.com/rain-world-map 的雨世界地图项目，我们对他进行了汉化。
+一个源于 https://github.com/rain-world-map 的雨世界地图项目，对他进行了一点点修改。
 
 原项目地址：[GitHub](https://github.com/rain-world-map/rain-world-map.github.io)   原网页地址：https://rain-world-map.github.io/
 
-汉化项目地址：[GitHub](https://github.com/xiowo/rain-world-map-SimplifiedChinese) 地址：https://rain-world-map.xiowo.net
+汉化项目地址：[Gitee](https://gitee.com/rain-world-map) 网页地址：https://rain-world-map.xiowo.net | [备用传送门](https://rain-world-map.gitee.io/)
 
 ### 变化
 将地图内容进行汉化
