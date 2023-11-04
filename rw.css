@@ -9,16 +9,29 @@
     src: url(resources/AlimamaFangYuanTiVF-Thin.ttf) format("truetype");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
 .rw-title {
     font-family: "Rodondo";
     font-size: 6rem;
     text-align: center;
     line-height: 75%;
+    width: 100%;
 }
 
 .rw-bigtext {
     font-family: 'AlimamaFangYuanTiVF-Thin';
-    font-size: 1.125rem;
+    font-size: 1.3125rem;
     font-weight: 600;
 }
 
@@ -46,7 +59,8 @@
 /* RW UI START */
 
 /* BUTTON */
-button.rw-ui {
+button.rw-ui,
+.rw-button {
     appearance: none;
     cursor: pointer;
     position: relative;
@@ -63,12 +77,14 @@ button.rw-ui {
     transition: color 0.3s;
 }
 
-button.rw-ui:hover {
+button.rw-ui:hover,
+.rw-button:hover {
     animation: border-blinker 0.8s linear infinite, flasher 0.3s;
     color: white;
 }
 
-button.rw-ui::before {
+button.rw-ui::before,
+.rw-button::before {
     /* outline that expands */
     content: "";
     position: absolute;
@@ -84,13 +100,15 @@ button.rw-ui::before {
     transition: padding 0.3s, border-color 0.3s, margin 0.3s;
 }
 
-button.rw-ui:hover::before {
+button.rw-ui:hover::before,
+.rw-button:hover::before {
     border-color: white;
     padding: 4px;
     margin: -6px;
 }
 
-button.rw-ui:active::before {
+button.rw-ui:active::before,
+.rw-button:active::before {
     border-color: white;
     padding: unset;
     margin: -2px;
@@ -100,7 +118,9 @@ button.rw-ui:active::before {
 
 /* TOGGLES */
 input[type='checkbox'].rw-ui,
-input[type='radio'].rw-ui {
+input[type='radio'].region-radio,
+input[type='radio'].rw-ui,
+input[type='button'].rw-ui {
     appearance: none;
     cursor: pointer;
     position: relative;
@@ -115,7 +135,9 @@ input[type='radio'].rw-ui {
 }
 
 input[type='checkbox'].rw-ui::before,
-input[type='radio'].rw-ui::before {
+input[type='radio'].region-radio::before,
+input[type='radio'].rw-ui::before,
+input[type='button'].rw-ui::before {
     /* outline that expands */
     content: "";
     position: absolute;
@@ -132,8 +154,10 @@ input[type='radio'].rw-ui::before {
 }
 
 /* inserted span */
-input[type='checkbox'].rw-ui+span,
-input[type='radio'].rw-ui+span {
+input[type='checkbox'].rw-ui,
+input[type='radio'].rw-ui+span,
+input[type='radio'].region-radio,
+input[type='button'].rw-ui+span {
     cursor: pointer;
     position: absolute;
     left: 0px;
@@ -149,7 +173,8 @@ input[type='radio'].rw-ui+span {
 
 /* inserted 50x50 image */
 input[type='checkbox'].rw-ui+img,
-input[type='radio'].rw-ui+img {
+input[type='radio'].rw-ui+img,
+input[type='button'].rw-ui+img {
     position: absolute;
     cursor: pointer;
     opacity: 0.72;
@@ -161,13 +186,17 @@ input[type='radio'].rw-ui+img {
 
 /* checked */
 input[type='checkbox'].rw-ui:checked::before,
-input[type='radio'].rw-ui:checked::before {
+input[type='radio'].region-radio:checked::before,
+input[type='radio'].rw-ui:checked::before,
+input[type='button'].rw-ui:checked::before {
     border-color: #A9A4B2;
     /* lightgray */
 }
 
 input[type='checkbox'].rw-ui:checked::after,
-input[type='radio'].rw-ui:checked::after {
+input[type='radio'].region-radio:checked::after,
+input[type='radio'].rw-ui:checked::after,
+input[type='button'].rw-ui:checked::after {
     /* extra outline */
     content: "";
     position: absolute;
@@ -184,69 +213,88 @@ input[type='radio'].rw-ui:checked::after {
 }
 
 input[type='checkbox'].rw-ui:checked+span,
-input[type='radio'].rw-ui:checked+span {
+input[type='radio'].region-radio:checked+span,
+input[type='radio'].rw-ui:checked+span,
+input[type='button'].rw-ui:checked+span {
     color: #A9A4B2;
     /* lightgray */
 }
 
 input[type='checkbox'].rw-ui:checked+img,
-input[type='radio'].rw-ui:checked+img {
+input[type='radio'].rw-ui:checked+img,
+input[type='button'].rw-ui:checked+img {
     opacity: 1.0;
 }
 
 /* hover */
 input[type='checkbox'].rw-ui:hover,
-input[type='radio'].rw-ui:hover {
+input[type='radio'].region-radio:hover,
+input[type='radio'].rw-ui:hover,
+input[type='button'].rw-ui:hover {
     animation: border-blinker 0.8s linear infinite, flasher 0.3s;
 }
 
 input[type='checkbox'].rw-ui:hover::before,
-input[type='radio'].rw-ui:hover::before {
+input[type='radio'].region-radio:hover::before,
+input[type='radio'].rw-ui:hover::before,
+input[type='button'].rw-ui:hover::before {
     margin: -6px;
     padding: 4px;
     border-color: white;
 }
 
 input[type='checkbox'].rw-ui:checked:hover::after,
-input[type='radio'].rw-ui:checked:hover::after {
+input[type='radio'].region-radio:checked:hover::after,
+input[type='radio'].rw-ui:checked:hover::after,
+input[type='button'].rw-ui:checked:hover::after {
     margin: -10px;
     padding: 8px;
     border-color: white;
 }
 
 input[type='checkbox'].rw-ui:hover+span,
-input[type='radio'].rw-ui:hover+span {
+input[type='radio'].rw-ui:hover+span,
+input[type='radio'].region-radio:hover+span,
+input[type='button'].rw-ui:hover+span {
     color: white;
 }
 
 input[type='checkbox'].rw-ui:hover+img,
-input[type='radio'].rw-ui:hover+img {
+input[type='radio'].rw-ui:hover+img,
+input[type='button'].rw-ui:hover+img {
     opacity: 1.0;
     transform: scaleX(1.2) scaleY(1.2);
 }
 
 /* active */
 input[type='checkbox'].rw-ui:active,
-input[type='radio'].rw-ui:active {
+input[type='radio'].rw-ui:active,
+input[type='radio'].region-radio:active,
+input[type='button'].rw-ui:active {
     animation: border-blinker 0.8s linear infinite, flasher 0.3s;
 }
 
 input[type='checkbox'].rw-ui:active::before,
-input[type='radio'].rw-ui:active::before {
+input[type='radio'].region-radio:active::before,
+input[type='radio'].rw-ui:active::before,
+input[type='button'].rw-ui:active::before {
     margin: -2px;
     padding: 0px;
     border-color: white;
 }
 
 input[type='checkbox'].rw-ui:checked:active::after,
-input[type='radio'].rw-ui:checked:active::after {
+input[type='radio'].region-radio:checked:active::after,
+input[type='radio'].rw-ui:checked:active::after,
+input[type='button'].rw-ui:checked:active::after {
     margin: -6px;
     padding: 4px;
     border-color: white;
 }
 
 input[type='checkbox'].rw-ui:active+img,
-input[type='radio'].rw-ui:active+img {
+input[type='radio'].rw-ui:active+img,
+input[type='button'].rw-ui:active+img {
     transform: none;
 }
 
