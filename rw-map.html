@@ -10,6 +10,7 @@
     <meta property="og:title" content="雨世界地图" />
     <meta property="og:url" content="https://rain-world-map.gitee.io" />
     <meta property="og:description" content="一个在线互动地图，包括雨世界:倾盆大雨中的每个地区和每个蛞蝓猫。" />
+    <meta name="keywords" content="雨世界,雨世界地图">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雨世界地图</title>
     <link rel="stylesheet" href="rw.css">
@@ -78,7 +79,7 @@
             font-size: 16px;
         }
 
-        .list a {
+        .list ul li a {
             margin-left: 1em;
             font-size: 14px;
         }
@@ -174,7 +175,7 @@
         /* 表格样式 */
         .indexgroup table {
             width: 100%;
-            border-radius: 3px;
+            border-radius: 7px;
             border: 2px solid #A9A4B200;
             border-color: #A9A4B2;
             align-content: center;
@@ -187,8 +188,8 @@
         }
 
         .indexgroup td {
-            padding: 5px;
-            border-radius: 5px;
+            padding: 3px;
+            border-radius: 8px;
             border: 2px solid #A9A4B200;
             border-color: #A9A4B2;
             max-width: 200px;
@@ -231,7 +232,7 @@
         }
 
         .scuglist-group>div {
-            width: 200px;
+            width: 150px;
             position: relative;
             /* re-center after wrap */
             margin-left: auto;
@@ -251,8 +252,9 @@
         #footer {
             position: fixed;
             margin-bottom: 0.1em;
-            bottom: 1%;
-            left: 34%;
+            margin-left: -185px;
+            bottom: 2%;
+            left: 50%;
             align-content: center;
             text-align: center;
             font-family: 'Segoe UI';
@@ -277,7 +279,7 @@
 <body>
     <div class="container">
         <div class="list">
-            <h2>RWM wiki</h2>
+            <h2>索引</h2>
             <h3><span class="tocnumber">1.</span><a href="#top" style="font-size: 16px; margin-left: 0;">地图</a></h3>
             <ul>
                 <li><a href="#tilenodes"><span class="tocnumber">1.</span>房间节点</a></li>
@@ -309,18 +311,19 @@
                         <span class="tocnumber">1.1</span>操控</a></li>
                 <li><a href="https://rainworld.miraheze.org/wiki/Rain/zh-hans" target="_blank">
                         <span class="tocnumber">1.2</span>暴雨</a></li>
+                <li><a href="https://rainworld.miraheze.org/wiki/Hibernation/zh-hans" target="_blank">
+                        <span class="tocnumber">1.3</span>雨眠</a></li>
                 <li><a href="https://rainworld.miraheze.org/wiki/Regions/zh-hans" target="_blank">
-                        <span class="tocnumber">1.3</span>区域</a></li>
-                <li><a href="https://rainworld.miraheze.org/wiki/Creatures/zh-hans" target="_blank">
-                        <span class="tocnumber">1.4</span>生物</a></li>
+                        <span class="tocnumber">1.4</span>区域</a></li>
                 <li><a href="https://rainworld.miraheze.org/wiki/Food/zh-hans" target="_blank">
                         <span class="tocnumber">1.5</span>食物</a></li>
-                <p>更多可见 雨世界wiki</p>
+                <p>更多可见 <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans"
+                        target="_blank">雨世界wiki</a></p>
             </ul>
             <h2>其他</h2>
             <ul>
                 <h3><span class="tocnumber">1.</span> 关于</h3>
-                <li><a href="https://rainworld.miraheze.org/wiki/Rain_World" target="_blank">
+                <li><a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans#关于雨世界" target="_blank">
                         <span class="tocnumber">1.1</span>关于雨世界</a></li>
                 <li><a href="https://blog.xiowo.net/posts/5f6551dc.html" target="_blank">
                         <span class="tocnumber">1.2</span>关于地图</a></li>
@@ -346,11 +349,8 @@
                         <p>信息来自 <a href=" https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans"
                         target="_blank"><b>雨世界wiki</b></a> 如有错误可以前往 我的<a href="
                         https://blog.xiowo.net/posts/5f6551dc.html" target="_blank"><b>blog</b></a> 指出
-                        </p>
-                        <p>此外这里的信息没有 <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans"
-                                target="_blank"><b>雨世界wiki</b></a> 那么详细，如果你想详细的了解这些你可以查阅 <a
-                                href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans"
-                                target="_blank"><b>雨世界wiki</b></a> ( ‵▽′)ψ
+                        | 如果你想详细的了解雨世界你可以查阅 <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans"
+                            target="_blank"><b>雨世界wiki</b></a> ( ‵▽′)ψ
                         </p>
                         <!-- 原版地图开始 -->
                         <h2 id=" 原版地图">原版地图</h2>
@@ -447,7 +447,7 @@
                                     <figure>
                                         <img src="./resources/icons/Shortcut_Creature_Hole_icon.png" />
                                         <figcaption>生物洞</figcaption>
-                                        <content>也被称为den;生物在哪里生成并进入冬眠/进食</content>
+                                        <content>也被称为兽穴;生物在哪里生成并进入雨眠/进食</content>
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/Shortcut_NPC_Transportation_icon.png" />
@@ -504,8 +504,8 @@
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/AncientShelter_icon.png" />
-                                        <figcaption>古代避难所</figcaption>
-                                        <content>一个普通避难所的大变种，增加了门和多个房间
+                                        <figcaption>古代庇护所</figcaption>
+                                        <content>一个普通庇护所的plus版本，变得更大了，增加了门和多个房间
                                             连接</content>
                                     </figure>
                                     <figure>
@@ -515,8 +515,8 @@
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/SwarmRoom_icon.png" />
-                                        <figcaption>群无间</figcaption>
-                                        <content>使蝙蝠可以从房间内放置的巢穴中生成
+                                        <figcaption>蝙蝠生成房间</figcaption>
+                                        <content>蝙蝠可以从房间内放置的巢穴中生成
                                         </content>
                                     </figure>
                                     <figure>
@@ -531,7 +531,7 @@
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/ScavTrader_icon.png" />
-                                        <figcaption>拾荒者商人/商人</figcaption>
+                                        <figcaption>拾荒者商人</figcaption>
                                         <content>特定拾荒者将在这里交易</content>
                                     </figure>
                                     <figure>
@@ -553,7 +553,7 @@
                                         <img src="./resources/icons/Monk_icon.png" />
                                         <figcaption>僧侣</figcaption>
                                         <content>身体虚弱，但精神强大。你与世界的奥秘相协调，与其中的生灵感同身受，你的旅途显然会更加安宁。“简单模式” -
-                                            总是在死亡地点生成一朵业力之花。最初对大多数生物的声望更高，肺活量为 0.83，启用Remix选项后为
+                                            总是在死亡地点生成一朵业力花。最初对大多数生物的好感度更高，肺活量为 0.83，启用Remix选项后为
                                             1.25。生物生成经过修改，以提供更轻松的体验。</content>
                                         <table>
                                             <tr>
@@ -565,12 +565,12 @@
                                                 <td>1 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>No</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -626,12 +626,12 @@
                                                 <td>1 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>No</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -675,7 +675,7 @@
                                         <img src="./resources/icons/Hunter_icon.png" />
                                         <figcaption>猎手</figcaption>
                                         <content>强壮而迅捷，新陈代谢旺盛，需要稳定的肉类供给。但果腹不会是你面临的唯一难题，毕竟猎手之路危机四伏。“困难模式” -
-                                            在永久死亡之前只有有限的雨期。最初在大多数生物中声望较低，并且能够在其背上储存和取回长矛。生物生成使用专属生物进行修改，以获得更难的体验。
+                                            在永久死亡之前只有有限的雨期。最初在大多数生物中好感度较低，能够在其背上储存和取回长矛。生物生成使用其专属的改动，以获得更难的体验。
                                         </content>
                                         <table>
                                             <tr>
@@ -687,12 +687,12 @@
                                                 <td>3 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>Yes</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>是</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -700,7 +700,7 @@
                                             </tr>
                                             <tr>
                                                 <td>饮食</td>
-                                                <td>生物尸体, & 标准食物的1/4点</td>
+                                                <td>生物尸体 & 标准食物的1/4点</td>
                                             </tr>
                                             <tr>
                                                 <td>肺活量</td>
@@ -736,7 +736,7 @@
                                         <img src="./resources/icons/Gourmand_icon.png" />
                                         <figcaption>饕餮</figcaption>
                                         <content>
-                                            沉迷于生活中简单的乐趣。将世界纳于腹中可以带来许多战术优势，但代价是容易气喘吁吁。沉重且移动速度缓慢，容易喘气，暂时降低肺活量、移动速度和长矛伤害，直到恢复体力。可以使用它的重量作为武器，并通过组合两个物品来制作新的物品和食物。
+                                            沉迷于生活中简单的乐趣，将世界纳于腹中。其特点可以带来许多战术优势，但代价是容易气喘吁吁。沉重且移动速度缓慢，容易喘气，喘气时暂时降低肺活量、移动速度和长矛伤害，直到恢复体力。可以使用它的重量作为武器，并通过组合两个物品来制作新的物品和食物。
                                         </content>
                                         <table>
                                             <tr>
@@ -748,12 +748,12 @@
                                                 <td>1 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>No</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -797,7 +797,7 @@
                                         <img src="./resources/icons/Artificer_icon.png" />
                                         <figcaption>工匠</figcaption>
                                         <content>一位凶猛的斗士，掌握烈火与爆炸之力。怀着向食物链顶层攀登的决心，你的旅途必将伴随着流血与战争。“困难模式” -
-                                            具有通过爆炸来双跳和眩晕生物的能力，可以将某些物品变成爆炸物，攻击生物，并且对拾荒者的攻击力最大 </content>
+                                            具有通过爆炸来二段跳和眩晕生物的能力，可以将某些物品变成爆炸物，攻击生物，并且对拾荒者的攻击力最大 </content>
                                         <table>
                                             <tr>
                                                 <td>初始房间</td>
@@ -808,12 +808,12 @@
                                                 <td>1 (1)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>No</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>Yes</td>
+                                                <td>是</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -821,7 +821,7 @@
                                             </tr>
                                             <tr>
                                                 <td>饮食</td>
-                                                <td>生物尸体, & 1/4 pips from 标准 Edibles</td>
+                                                <td>生物尸体 & 标准食物的1/4点</td>
                                             </tr>
                                             <tr>
                                                 <td>肺活量</td>
@@ -869,12 +869,12 @@
                                                 <td>1 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>Yes</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>是</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -918,7 +918,7 @@
                                         <img src="./resources/icons/Spearmaster_icon.png" />
                                         <figcaption>矛大师</figcaption>
                                         <content>
-                                            一个异常生物，用从身上拔下的针吸食猎物。一位来自遥远地域的旅人；信使啊，内心深处的某种感觉驱使你再次踏上旅程……“困难模式” -
+                                            一个异常生物，用从身上拔下的针吸食猎物。一位来自遥远地域的旅人；信使啊，内心深处的某种感觉驱使你再次踏上旅程…… “困难模式” -
                                             通过尾巴生成长矛，用来刺穿和吸取其他生物的血肉。矛大师只能通过这种方式果腹。。</content>
                                         <table>
                                             <tr>
@@ -930,12 +930,12 @@
                                                 <td>1 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>No</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -979,7 +979,7 @@
                                         <img src="./resources/icons/Saint_icon.png" />
                                         <figcaption>圣徒</figcaption>
                                         <content>
-                                            开始游戏，有一系列独特的机制，例如用长舌黏附在天花板或墙壁上荡来荡去，还能通过按上下键控制舌头长度。然而，圣徒无法正常投掷长矛，因此很难保护自己。十分柔弱，长着一条长舌头。行走于此途需要谨慎、耐心，与世界达成完美的共鸣，你的旅途将是迈向圆满的启迪之路。
+                                            十分柔弱，长着一条长舌头。行走于此途需要谨慎、耐心，与世界达成完美的共鸣，你的旅途将是迈向圆满的启迪之路。开始游戏，有一系列独特的机制，例如用长舌黏附在天花板或墙壁上荡来荡去，还能通过按上下键控制舌头长度。然而，圣徒无法正常投掷长矛，因此很难保护自己。
                                         </content>
                                         <table>
                                             <tr>
@@ -991,12 +991,12 @@
                                                 <td>1 (2)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
+                                                <td>以沟通标记开头</td>
                                                 <td>N/a</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>No</td>
+                                                <td>否</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -1052,12 +1052,12 @@
                                                 <td>1 (5)</td>
                                             </tr>
                                             <tr>
-                                                <td>以标记开头</td>
-                                                <td>Yes</td>
+                                                <td>以沟通标记开头</td>
+                                                <td>是</td>
                                             </tr>
                                             <tr>
                                                 <td>撕咬能力</td>
-                                                <td>Yes</td>
+                                                <td>是</td>
                                             </tr>
                                             <tr>
                                                 <td>每次冬眠的食物 (最大)</td>
@@ -1065,7 +1065,7 @@
                                             </tr>
                                             <tr>
                                                 <td>饮食</td>
-                                                <td>标准 & 1/2 Pips from 生物尸体</td>
+                                                <td>标准 & 生物尸体的1/2点</td>
                                             </tr>
                                             <tr>
                                                 <td>肺活量</td>
@@ -1100,7 +1100,7 @@
                                     <figure>
                                         <img src="./resources/icons/Slugpup_icon.png" />
                                         <figcaption>蛞蝓猫幼崽</figcaption>
-                                        <content>蛞蝓猫幼崽是在倾盆大雨DLC中加入的一种新生物。完成 饕餮的食谱任务并达成归乡结局后，饕餮、 求生者和
+                                        <content>蛞蝓猫幼崽是在倾盆大雨DLC中加入的一种新生物。完成饕餮的食谱任务并达成归乡结局后，饕餮、 求生者和
                                             猎手的流程中会生成猫崽。它们是蛞蝓猫的幼年形态，只能依赖玩家活下去。</content>
                                         <table>
                                             <tr>
@@ -1146,7 +1146,7 @@
                                         <figure>
                                             <img src="./resources/icons/Pink_Lizard_icon.png" />
                                             <figcaption>粉蜥蜴</figcaption>
-                                            <content>通用，无特殊属性</content>
+                                            <content>和绿蜥蜴差不多，无特殊属性</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1185,7 +1185,7 @@
                                         <figure>
                                             <img src="./resources/icons/White_Lizard_icon.png" />
                                             <figcaption>白蜥蜴</figcaption>
-                                            <content>具有爬墙和伪装自己的能力静止，具有远距离舌头
+                                            <content>具有爬墙和静止时伪装自己的能力，具有远距离舌头
                                             </content>
                                             <table>
                                                 <tr>
@@ -1205,7 +1205,7 @@
                                         <figure>
                                             <img src="./resources/icons/Black_Lizard_icon.png" />
                                             <figcaption>黑蜥蜴</figcaption>
-                                            <content>没有视力，通过声音检测玩家</content>
+                                            <content>没有视力，通过声音感知玩家</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1224,7 +1224,7 @@
                                         <figure>
                                             <img src="./resources/icons/Yellow_Lizard_icon.png" />
                                             <figcaption>黄蜥蜴</figcaption>
-                                            <content>始终成群结队地出现，具有类似群体思维的能力，可以在彼此之间传达检测到的玩家存在</content>
+                                            <content>始终成群结队地出现，具有类似群体思维的能力，可以在彼此之间传达感知到玩家存在的信息</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1243,7 +1243,7 @@
                                         <figure>
                                             <img src="./resources/icons/Cyan_Lizard_icon.png" />
                                             <figcaption>青色蜥蜴</figcaption>
-                                            <content>具有攀爬墙壁的能力，以及可快速展开的高度敏捷的跳跃，气体推动它们在空中飞行，距离取决于蓄力时间 </content>
+                                            <content>具有攀爬墙壁的能力，可快速的展开高度敏捷的跳跃，气体推动它们在空中飞行，距离取决于蓄力时间 </content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1283,7 +1283,7 @@
                                         <figure>
                                             <img src="./resources/icons/Salamander_icon.png" />
                                             <figcaption>蝾螈</figcaption>
-                                            <content>在陆地上的敏捷性低，在水中的敏捷性高，经常充当伏击捕食者，一动不动地坐在水池底部，直到发现猎物
+                                            <content>虽然在陆地上的敏捷性低，但在水中的敏捷性高，经常充当伏击捕食者，一动不动地坐在水池底部，直到发现猎物
                                             </content>
                                             <table>
                                                 <tr>
@@ -1323,7 +1323,7 @@
                                         <figure>
                                             <img src="./resources/icons/Strawberry_Lizard_icon.png" />
                                             <figcaption>草莓蜥蜴</figcaption>
-                                            <content>在食物链的低端，吃蝙蝠蝇，它可以伸出长长的舌头将自己拉向被抓住的目标</content>
+                                            <content>在食物链的底层，吃蝠蝇，它可以伸出长长的舌头将自己拉向被抓住的目标</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1342,7 +1342,7 @@
                                         <figure>
                                             <img src="./resources/icons/Eel_Lizard_icon.png" />
                                             <figcaption>鳗蜥蜴</figcaption>
-                                            <content>陆地上只有可怜的敏捷性，但在水下具有出色的视野和敏捷性。在水下可以通过其发光的头部来识别</content>
+                                            <content>陆地上只有可怜的敏捷性，在水下具有出色的视野和敏捷性。在水下可以通过其发光的头部来识别</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1408,7 +1408,7 @@
                                         <figure>
                                             <img src="./resources/icons/Adult_Centipede_icon.png" />
                                             <figcaption>成年蜈蚣</figcaption>
-                                            <content>范围从玩家的体重到刚刚超过，因此从中立到敌对（如果交战）</content>
+                                            <content>其体型范围从玩家的体重到刚刚超过，因此从中立到敌对（如果交战）</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值 (Youth)</td>
@@ -1454,7 +1454,7 @@
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
-                                                    <td>13.3 or ≈9.195</td>
+                                                    <td>13.3 或 ≈9.195</td>
                                                 </tr>
                                                 <tr>
                                                     <td>眩晕抗性</td>
@@ -1510,7 +1510,7 @@
                                         <figure>
                                             <img src="./resources/icons/Brother_Long_Legs_icon.png" />
                                             <figcaption>黄长腿菌</figcaption>
-                                            <content>仅通过触摸检测，触手较小，囊肿核心，和强的灵活性</content>
+                                            <content>仅通过触摸感知玩家，触手、囊肿核心较小，灵活性强</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1529,7 +1529,7 @@
                                         <figure>
                                             <img src="./resources/icons/Daddy_Long_Legs_icon.png" />
                                             <figcaption>蓝长腿菌</figcaption>
-                                            <content>仅通过声音和触摸进行检测，触手长度适中，囊肿核心灵活
+                                            <content>仅通过声音和触摸感知玩家，触手长度中等，囊肿核心灵活
                                             </content>
                                             <table>
                                                 <tr>
@@ -1549,7 +1549,7 @@
                                         <figure>
                                             <img src="./resources/icons/Mother_Long_Legs_icon.png" />
                                             <figcaption>紫长腿菌</figcaption>
-                                            <content>只能通过声音和触摸进行检测，灵活性较低，触角超长，囊肿核心很大</content>
+                                            <content>只能通过声音和触摸感知玩家，灵活性较低，触角超长，囊肿核心很大</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1568,7 +1568,7 @@
                                         <figure>
                                             <img src="./resources/icons/Hunter_Long_Legs_icon.png" />
                                             <figcaption>猎手长腿菌</figcaption>
-                                            <content>通过声音、视觉和触觉检测，最小的腐化生物和，触手越来越少，越来越短，有一个猎人形状的囊肿核心</content>
+                                            <content>通过声音、视觉和触觉感知玩家，最小的腐化生物，只具有较少和短的触手，有一个猎人形状的囊肿核心</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1590,7 +1590,7 @@
                                         <figure>
                                             <img src="./resources/icons/Coalescipede_icon.png" />
                                             <figcaption>小蜘蛛</figcaption>
-                                            <content>小而多。通过群集攻击猎物，如果蜘蛛的累积质量大于猎物，则将其杀死</content>
+                                            <content>小而多。通过群集攻击猎物，如果蜘蛛的累积质量大于猎物，则其将被杀死</content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -1609,7 +1609,7 @@
                                         <figure>
                                             <img src="./resources/icons/Big_Spider_icon.png" />
                                             <figcaption>狼蛛</figcaption>
-                                            <content>一只体型较大的蜘蛛，在发出嘶嘶声并向猎物猛扑之前，会露出獠牙
+                                            <content>一只体型较大的蜘蛛，在发出嘶嘶声并向猎物猛扑之前会露出獠牙
                                             </content>
                                             <table>
                                                 <tr>
@@ -1630,7 +1630,7 @@
                                             <img src="./resources/icons/Spitter_Spider_icon.png" />
                                             <figcaption>烈焰狼蛛</figcaption>
                                             <content>
-                                                不像普通的大蜘蛛那样敏捷，但通过从远处跟踪猎物并射出有毒的针头来弥补，这些针头在受影响的生物身上形成衰弱的眩晕，然后取回无法移动的猎物
+                                                不像普通的大蜘蛛那样敏捷，但它可以通过从远处跟踪猎物并射出有毒的针头来弥补，这些针头在受影响的生物身上形成衰弱的眩晕，然后取回无法移动的猎物
                                             </content>
                                             <table>
                                                 <tr>
@@ -1746,8 +1746,8 @@
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/Blue_Leech_icon.png" />
-                                        <figcaption>蓝水蛭 / 海水蛭</figcaption>
-                                        <content>更长的水蛭，具有更大的质量和敏捷性，可以拉下并淹死猎物
+                                        <figcaption>蓝水蛭</figcaption>
+                                        <content>更长的水蛭，具有更大的质量和敏捷性，可以拉入水并淹死猎物
                                         </content>
                                         <table>
                                             <tr>
@@ -1767,7 +1767,7 @@
                                     <figure>
                                         <img src="./resources/icons/Jungle_Leech_icon.png" />
                                         <figcaption>丛林水蛭</figcaption>
-                                        <content>它不是试图拉下并淹死猎物，而是具有跳跃的能力，并且具有高度持久的锁定能力，除非强行解开，否则玩家会定期从猎物身上吸干食物点</content>
+                                        <content>不通过拉入水来淹死猎物，具有跳跃和持久的吸附能力，除非强行解开，否则玩家会定期从猎物身上吸干食物点</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -1786,7 +1786,7 @@
                                     <figure>
                                         <img src="./resources/icons/Pole_Plant_icon.png" />
                                         <figcaption>拟态草</figcaption>
-                                        <content>微妙的脉冲表明它的真实性质，在进入房间时最明显，否则会把抓住它们的生物拉进它们的巢穴。通常从地面开始垂直方向，很少从屋顶倒置甚至水平开始。
+                                        <content>细微的扭动以表明其真实性质，在进入房间时最明显，否则会把抓住它们的生物拉进它们的巢穴。通常从地面开始垂直方向，很少从屋顶倒置甚至水平开始。
                                         </content>
                                         <table>
                                             <tr>
@@ -1806,7 +1806,7 @@
                                     <figure>
                                         <img src="./resources/icons/Monster_Kelp_icon.png" />
                                         <figcaption>红树</figcaption>
-                                        <content>一只绿叶柔韧的手臂，可以抓住触手可及的移动生物，并将它们拉入巢穴。可以通过极慢地移动它们来绕过它们。</content>
+                                        <content>一只绿叶柔韧的手臂，可以抓住触手可及的移动生物，并将其拉入巢穴。不过你可以通过极慢地移动它们来绕过它们。</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -1863,8 +1863,8 @@
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/Chieftain_Scavenger_icon.png" />
-                                        <figcaption>拾荒者之王</figcaption>
-                                        <content>所有拾荒者的酋长，拥有一个独特的面具，红色蜈蚣壳作为盔甲，通信标志，和一架公民身份无人机</content>
+                                        <figcaption>拾荒者酋长</figcaption>
+                                        <content>所有拾荒者的酋长，拥有一个独特的面具，三片烈焰蜈蚣鳞甲护体，沟通的标记，和一架公民身份无人机</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -1903,7 +1903,7 @@
                                     <figure>
                                         <img src="./resources/icons/King_Vulture_icon.png" />
                                         <figcaption>魔王鹫</figcaption>
-                                        <content>一只更复杂的秃鹫，有两根可伸缩的獠牙，它用它作为激光制导的鱼叉来抓住和杀死生物。</content>
+                                        <content>一只更复杂的秃鹫，有两根可伸缩的矛叉，它用它作为激光制导的矛叉来抓住和杀死生物。</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -1941,7 +1941,7 @@
                                     <figure>
                                         <img src="./resources/icons/Miros_Vulture_icon.png" />
                                         <figcaption>钢秃鹫</figcaption>
-                                        <content>稀有但非常致命，具有秃鹫的飞行能力和米钢鸟的喙。受伤时定期发射激光制导炸药</content>
+                                        <content>稀有但非常致命，除了秃鹫拥有的特性之外，钢秃鹫还有像钢鸟一样的剪刀喙，并且受伤后会射出爆炸性激光</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -1979,7 +1979,7 @@
                                     <figure>
                                         <img src="./resources/icons/Lantern_Mouse_icon.png" />
                                         <figcaption>光鼠</figcaption>
-                                        <content>脆弱而滑溜溜的生物，经常吊在屋顶上，由某种可伸缩的绳尾巴悬挂。活着时会发光。.</content>
+                                        <content>脆弱而滑溜溜的生物，经常吊在屋顶上，由某种可伸缩的绳尾巴悬挂。活着时会发光。</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -1998,7 +1998,7 @@
                                     <figure>
                                         <img src="./resources/icons/Rain_Deer_icon.png" />
                                         <figcaption>雨鹿</figcaption>
-                                        <content>雨鹿能够绕过虫草的威胁，被烟雾果吸引并吃掉，它们躺在靠近地面的地面上，供玩家搭便车，“雨鹿”一词也常被用来互相问好(误)</content>
+                                        <content>雨鹿能够绕过虫草的威胁，被烟雾果吸引并吃掉，它们趴在靠近地面的地面上时可供玩家搭便车</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -2056,7 +2056,7 @@
                                     <figure>
                                         <img src="./resources/icons/Adult_Noodlefly_icon.png" />
                                         <figcaption>成年面条虫</figcaption>
-                                        <content>有翅膀的飞虫。会伸出一条松弛的针状舌头，使其僵硬在自己或受到威胁的幼崽身上，然后冲上去试图刺伤攻击者。 </content>
+                                        <content>有翅膀的飞虫。在自身或幼崽受到威胁时，会使松弛的针状舌头伸展并变硬，然后冲上去刺伤攻击者。 </content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -2075,7 +2075,7 @@
                                     <figure>
                                         <img src="./resources/icons/Infant_Noodlefly_icon.png" />
                                         <figcaption>幼年面条虫</figcaption>
-                                        <content>较小的面条蝇，没有自卫能力。可以捡起来吃。</content>
+                                        <content>较小的面条蝇，没有自卫能力，可以捡起来吃。</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -2094,7 +2094,7 @@
                                     <figure>
                                         <img src="./resources/icons/Jetfish_icon.png" />
                                         <figcaption>蛙鱼</figcaption>
-                                        <content>水生生物，允许玩家抓住水面时快速穿越水面。喜欢蓝色水果，喂食后会提高声誉。达到一定程度时可能会骚扰不喜欢的生物，甚至淹死它们
+                                        <content>水生生物，允许玩家抓住以快速穿越水面。喜欢蓝色水果，喂食后会提高好感度。达到一定程度时可能会骚扰不喜欢的生物，甚至淹死它们
                                         </content>
                                         <table>
                                             <tr>
@@ -2171,7 +2171,7 @@
                                     <figure>
                                         <img src="./resources/icons/Inspector_icon.png" />
                                         <figcaption>监察者</figcaption>
-                                        <content>包含在迭代器上层建筑中的目的生物，意味着不防御其他目的生物并攻击任何敌对的外来威胁</content>
+                                        <content>DLC倾盆大雨独有的生物。它们颜色各异，三颗头通过各自的长颈连接在躯体上。它们保护着迭代器的神经元。</content>
                                         <table>
                                             <tr>
                                                 <td>最大生命值</td>
@@ -2190,7 +2190,8 @@
                                     <figure>
                                         <img src="./resources/icons/Yeek_icon.png" />
                                         <figcaption>跃客</figcaption>
-                                        <content>青蛙生物，可以进行大的垂直跳跃，可以用双手握住，让玩家控制和使用这些跳跃。发现于OE和圣猫的LF和SB的最西部地区。
+                                        <content>
+                                            跃客是一种善于跳跃的、多动的蛙状生物，仅出现在DLC倾盆大雨中。它们是被动生物，会借助两条棒状附肢在开阔地带四处跃动，通常集群出现，个体间不会离得过远。
                                         </content>
                                         <table>
                                             <tr>
@@ -2260,8 +2261,8 @@
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/LavaSafe_icon.png" />
-                                        <figcaption>熔岩安全</figcaption>
-                                        <content>与死亡酸液/空隙液接触时不会受到伤害</content>
+                                        <figcaption>Lava Safe</figcaption>
+                                        <content>与虚空流体接触时不会受到伤害</content>
                                     </figure>
                                     <figure>
                                         <img src="./resources/icons/VoidSea_icon.png" />
@@ -2289,7 +2290,7 @@
                                         <figure>
                                             <img src="./resources/icons/Giant_Jellyfish_icon.png" />
                                             <figcaption>巨型水母</figcaption>
-                                            <content>固定的</content>
+                                            <content></content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -2308,7 +2309,7 @@
                                         <figure>
                                             <img src="./resources/icons/Stowaway_icon.png" />
                                             <figcaption>藤壶</figcaption>
-                                            <content>捕食者</content>
+                                            <content></content>
                                             <table>
                                                 <tr>
                                                     <td>最大生命值</td>
@@ -2990,7 +2991,7 @@
                                         <figure>
                                             <img src="./resources/icons/Lightning_Machine_icon.png" />
                                             <figcaption>闪电机</figcaption>
-                                            <content>绿色闪电的无害间歇性视觉冲击</content>
+                                            <content>绿色闪电的无害间歇性视觉效果</content>
                                         </figure>
                                         <figure>
                                             <img src="./resources/icons/SkyDandelion.png" />
@@ -3155,22 +3156,22 @@
                                         </figure>
                                         <figure>
                                             <img src="./resources/icons/Wall_Steamer_icon.png" />
-                                            <figcaption>Wall Steamer</figcaption>
+                                            <figcaption>排放蒸汽的墙壁</figcaption>
                                             <content></content>
                                         </figure>
                                     </div>
                                 </div>
                             </article>
                 </div>
+            </div>
+        </div>
 
-            </div>
-            <div id="footer"> <a href="https://gitee.com/rain-world-map/" target="_blank">Gitee</a> 上的代码 |
-                图标和样式来自于
-                <a href="https://rainworld.miraheze.org/wiki/Regions" target="_blank">雨世界wiki</a> |
-                站点图标和缩略图由 <a href="https://twitter.com/liszhuk/" target="_blank">lis</a> 提供 | <a
-                    href="https://store.steampowered.com/app/312520/Rain_World/" target="_blank">雨世界</a> 是 <a
-                    href="https://twitter.com/VideocultMedia" target="_blank">Videocult</a> 的财产
-            </div>
+        <div id="footer"> <a href="https://gitee.com/rain-world-map/" target="_blank">Gitee</a> 上的代码 |
+            图标和样式来自于
+            <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans" target="_blank">雨世界wiki</a> | 此页面由
+            <a href="https://github.com/xiowo/" target="_blank">Mo</a> 制作 | <a
+                href="https://store.steampowered.com/app/312520/Rain_World/" target="_blank">雨世界</a> 是 <a
+                href="https://twitter.com/VideocultMedia" target="_blank">Videocult</a> 的财产
         </div>
 </body>
 
