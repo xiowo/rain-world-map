@@ -837,7 +837,7 @@
             crs: L.CRS.Simple,
             zoomControl: false,
         });
-        map.attributionControl.setPrefix('Powered by <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &amp <a href="https://github.com/henpemaz" title="Gamedev &amp associated arts enthusiast">Henpemaz</a>')
+        map.attributionControl.setPrefix('基于 <a href="https://leafletjs.com" title="一个用于交互式地图的JS库" target="_blank">Leaflet</a> &amp <a href="https://github.com/henpemaz" title="游戏开发及相关艺术爱好者">Henpemaz</a>')
         map.setView([0, 0], -5);
 
         // Events
@@ -978,7 +978,7 @@
                 // Tileset layer
                 if (tileLayer != null) map.removeLayer(tileLayer);
                 tileLayer = L.tileLayer(`${roompath}/{z}/{x}_{y}.png`, {
-                    attribution: "<a href=\"https://store.steampowered.com/app/312520/Rain_World/\">Rain World</a> by <a href=\"https://twitter.com/VideocultMedia\">Videocult</a>",
+                    attribution: "<a href=\"https://store.steampowered.com/app/312520/Rain_World/\">雨世界</a> 由 <a href=\"https://twitter.com/VideocultMedia\">Videocult</a> 制作",
                     minZoom: -7,
                     maxZoom: 3,
                     maxNativeZoom: 0, // important, stop requesting tiles at this point

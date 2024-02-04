@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./rw.css" />
     <link rel="stylesheet" href="./leaflet/leaflet.css" />
 
-    <!-- <script src="./global.js"></script> -->
     <script src="./leaflet/leaflet.js"></script>
     <script src="./beziero.js"></script>
 
@@ -79,9 +78,11 @@
         .overlay-label {
             position: relative;
             width: 150px;
-            height: 36px;
-            margin-top: 11px;
+            height: 33px;
+            margin-top: 15px;
             margin-bottom: 11px;
+            text-align: center;
+            line-height: 36px;
         }
 
         /* UI stuff */
@@ -147,16 +148,15 @@
 
         .region-btn {
             font-size: 0.8rem;
-            width: 160px;
-            height: 24px;
+            width: 180px;
+            height: 22px;
             position: relative;
-            margin-top: 8px;
+            margin-top: 7px;
             margin-bottom: 8px;
         }
 
-        input[type='radio'].rw-ui+span {
-            top: calc(50% - 10px);
-            /* proof that CSS is stupid, cant fucking vertical center text */
+        .region-btn span {
+            margin-top: 2px;
         }
 
         #region-select {
@@ -197,7 +197,7 @@
             <span id="modded-ckb-group">
                 <input type="checkbox" id="modded-ckb" name="modded" class="rw-ui rw-ui-ckb" autocomplete="off"
                     onclick="updateRegionList(this.checked);" />
-                <label for="modded-ckb" class="rw-text">Modded</label>
+                <label for="modded-ckb" class="rw-text">更多</label>
             </span>
         </div>
         <form name="regionselect" id="region-select" class="scroll-ish"></form>

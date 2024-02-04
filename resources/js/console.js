@@ -12,7 +12,7 @@ queueMicrotask(() => {
     const dnum = Math.floor(days);
     const ascll = [
         `欢迎访问雨世界地图!`,
-        `十方渡尽，无度轮回`,
+        `众生不度，轮回不止`,
         `
     
   ███████╗   ██╗     ██╗  ██╗     ██╗
@@ -26,7 +26,7 @@ queueMicrotask(() => {
         "已上线",
         dnum,
         "天",
-        "©2023 By R-W-M-SC | 地图版本 v1.2.1",
+        "©2023 By R-W-M-SC | 地图版本 v1.2.2",
     ];
     const ascll2 = [`NCC2-036`, `业力等级识别成功，允许访问.`, `您的业力: `, `⨂`];
 
