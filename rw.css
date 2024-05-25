@@ -77,6 +77,11 @@ button.rw-ui,
     transition: color 0.3s;
 }
 
+button.rw-ui {
+    height: fit-content;
+    background-color: #0c0c0c;
+}
+
 button.rw-ui:hover,
 .rw-button:hover {
     animation: border-blinker 0.8s linear infinite, flasher 0.3s;
