@@ -960,6 +960,8 @@
 
             console.log("Loading: region {" + region + "} on slugcat {" + pdifficulty + "}, modded {" + modded + "}");
 
+            var slugcat_url; // 将slugcat_url定义在函数外部，以便在全局范围内使用
+
             // 定义地图链接对象
             var slugcat_urls = {
                 '1': {
@@ -1002,12 +1004,14 @@
                     document.getElementById('option' + value).addEventListener('change', function () {
                         if (this.checked) {
                             saveSelectedValue(value);
+                            slugcat_url = slugcat_urls[value]; // 设置全局的slugcat_url
+                            console.log("当前地图资源来源: " + (value === '1' ? 'GitHub(Raw加速)' : 'GitHub'));
                         }
                     });
                 }
 
                 // 根据选中的值设置链接对象
-                var slugcat_url = slugcat_urls[selectedValue];
+                slugcat_url = slugcat_urls[selectedValue]; // 设置初始值
 
                 // 添加选项变化的事件监听器
                 setOptionChangeEventListener('1');
