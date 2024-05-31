@@ -960,68 +960,73 @@
 
             console.log("Loading: region {" + region + "} on slugcat {" + pdifficulty + "}, modded {" + modded + "}");
 
-            var slugcat_url; // 将slugcat_url定义在函数外部，以便在全局范围内使用
-
-            // 定义地图链接对象
-            var slugcat_urls = {
-                '1': {
-                    "artificer": "https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/artificer",
-                    "gourmand": "https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/gourmand",
-                    "rivulet": "https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/rivulet",
-                    "saint": "https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/saint",
-                    "spear": "https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/spear",
-                    "white": "https://raw.gitmirror.com/NobleCat57/vanilla-1.9.07b/v1.9.07b/white",
-                    "yellow": "https://raw.gitmirror.com/NobleCat57/vanilla-1.9.07b/v1.9.07b/yellow",
-                    "red": "https://raw.gitmirror.com/NobleCat57/vanilla-1.9.07b/v1.9.07b/red",
-                    "inv": "https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/inv",
-                },
-                '2': {
-                    "artificer": "https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/artificer",
-                    "gourmand": "https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/gourmand",
-                    "rivulet": "https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/rivulet",
-                    "saint": "https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/saint",
-                    "spear": "https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/spear",
-                    "white": "https://raw.githubusercontent.com/NobleCat57/vanilla-1.9.07b/v1.9.07b/white",
-                    "yellow": "https://raw.githubusercontent.com/NobleCat57/vanilla-1.9.07b/v1.9.07b/yellow",
-                    "red": "https://raw.githubusercontent.com/NobleCat57/vanilla-1.9.07b/v1.9.07b/red",
-                    "inv": "https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/inv",
-                }
+            // 地图资源选择
+            var slugcat_url = {
+                "artificer": "",
+                "gourmand": "",
+                "rivulet": "",
+                "saint": "",
+                "spear": "",
+                "white": "",
+                "yellow": "",
+                "red": "",
+                "inv": "",
             };
 
-            // 地图资源选择逻辑
-            function initMapSelection() {
-                var selectedValue = localStorage.getItem('slugcat_url') || '1';
-                var selectedOption = document.getElementById('option' + selectedValue);
-                selectedOption.checked = true;
-
-                // 保存选中状态和值到本地存储
-                function saveSelectedValue(value) {
-                    localStorage.setItem('slugcat_url', value);
+            // 检查是否之前已经保存了值
+            if (localStorage.getItem('slugcat_url')) {
+                var selectedValue = localStorage.getItem('slugcat_url');
+                // 根据之前保存的值设置初始选中状态
+                if (selectedValue === '1') {
+                    document.getElementById('option1').checked = true;
+                    setSlugcatUrl('https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                    console.log("当前地图资源来源:GitHub(Raw加速)");
+                } else if (selectedValue === '2') {
+                    document.getElementById('option2').checked = true;
+                    setSlugcatUrl('https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                    console.log("当前地图资源来源:GitHub");
                 }
-
-                // 设置选项变化的事件监听器
-                function setOptionChangeEventListener(value) {
-                    document.getElementById('option' + value).addEventListener('change', function () {
-                        if (this.checked) {
-                            saveSelectedValue(value);
-                            slugcat_url = slugcat_urls[value]; // 设置全局的slugcat_url
-                            console.log("当前地图资源来源: " + (value === '1' ? 'GitHub(Raw加速)' : 'GitHub'));
-                        }
-                    });
-                }
-
-                // 根据选中的值设置链接对象
-                slugcat_url = slugcat_urls[selectedValue]; // 设置初始值
-
-                // 添加选项变化的事件监听器
-                setOptionChangeEventListener('1');
-                setOptionChangeEventListener('2');
-
-                console.log("当前地图资源来源: " + (selectedValue === '1' ? 'GitHub(Raw加速)' : 'GitHub'));
+            } else {
+                // 如果之前未保存过值，默认选择第一个单选框并保存值
+                document.getElementById('option1').checked = true;
+                setSlugcatUrl('https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                saveSelectedValue('1');
             }
 
-            // 页面加载时初始化地图资源选择
-            document.addEventListener('DOMContentLoaded', initMapSelection);
+            // 保存选中状态和值到本地存储
+            function saveSelectedValue(value) {
+                localStorage.setItem('slugcat_url', value);
+            }
+
+            // 设置地图资源链接
+            function setSlugcatUrl(baseUrl) {
+                slugcat_url = {
+                    "artificer": baseUrl + "artificer",
+                    "gourmand": baseUrl + "gourmand",
+                    "rivulet": baseUrl + "rivulet",
+                    "saint": baseUrl + "saint",
+                    "spear": baseUrl + "spear",
+                    "white": baseUrl.replace('msc', 'vanilla') + "white",
+                    "yellow": baseUrl.replace('msc', 'vanilla') + "yellow",
+                    "red": baseUrl.replace('msc', 'vanilla') + "red",
+                    "inv": baseUrl + "inv",
+                };
+            }
+
+            // 添加事件监听器以便在选择变化时保存值
+            document.getElementById('option1').addEventListener('change', function () {
+                if (this.checked) {
+                    saveSelectedValue('1');
+                    setSlugcatUrl('https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                }
+            });
+
+            document.getElementById('option2').addEventListener('change', function () {
+                if (this.checked) {
+                    saveSelectedValue('2');
+                    setSlugcatUrl('https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                }
+            });
 
             var region_url = region.toLowerCase();
             var roompath = `${slugcat_url[pdifficulty]}/${region_url}`;
