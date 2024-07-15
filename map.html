@@ -553,17 +553,17 @@
 
         <div>地图资源</div>
         <p>加载不出来改这里然后刷新一下</p>
-        <p>若RAW挂了请改为GitHub</p>
+        <p>可使用GitHub(RAW加速)源</p>
         <p>GitHub可搭配 <a href="https://blog.xiowo.net/posts/cba8" target="_blank" style="color: #A9A4B2;">fastgithub</a>
             使用</p>
         <div class="resources">
             <input type="radio" id="option1" name="options" value="1" checked>
-            <label for="option1"> GitHub(RAW加速)</label>
+            <label for="option1"> GitHub</label>
         </div>
 
         <div class="resources">
             <input type="radio" id="option2" name="options" value="2">
-            <label for="option2"> GitHub</label>
+            <label for="option2"> GitHub(RAW加速)</label>
         </div>
     </div>
 
@@ -979,17 +979,17 @@
                 // 根据之前保存的值设置初始选中状态
                 if (selectedValue === '1') {
                     document.getElementById('option1').checked = true;
-                    setSlugcatUrl('https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
-                    console.log("当前地图资源来源:GitHub(Raw加速)");
-                } else if (selectedValue === '2') {
-                    document.getElementById('option2').checked = true;
                     setSlugcatUrl('https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
                     console.log("当前地图资源来源:GitHub");
+                } else if (selectedValue === '2') {
+                    document.getElementById('option2').checked = true;
+                    setSlugcatUrl('https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                    console.log("当前地图资源来源:GitHub(Raw加速)");
                 }
             } else {
                 // 如果之前未保存过值，默认选择第一个单选框并保存值
                 document.getElementById('option1').checked = true;
-                setSlugcatUrl('https://raw.gitmirror.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
+                setSlugcatUrl('https://raw.githubusercontent.com/NobleCat57/msc-1.9.07b/v1.9.07b/');
                 saveSelectedValue('1');
             }
 

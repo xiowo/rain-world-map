@@ -705,7 +705,7 @@
             region = pregion; // chaos
             modded = pmodded;
             console.log("LOADING REGION " + region + " modded? " + modded);
-            var folderpath = 'https://raw.gitmirror.com/henpemaz/Rain-World-Interactive-Map/master/docs/tiles/' + (modded ? 'modded' : 'vanilla') + '/' + region + '/';
+            var folderpath = 'https://raw.githubusercontent.com/henpemaz/Rain-World-Interactive-Map/master/docs/tiles/' + (modded ? 'modded' : 'vanilla') + '/' + region + '/';
             getJsonObject(folderpath + "region.json", function (json) {
                 // Background color
                 map.getContainer().style.backgroundColor = 'rgb(' + json["bgcolor"].join(',') + ')'; // I hate this with passion, but such is the way of the CSS

@@ -71,7 +71,16 @@
             margin: 0 auto;
             margin-top: 30px;
             padding: 0 15px;
-            width: 1100px;
+            max-width: 1430px;
+        }
+
+        .left-panel {
+            width: 180px;
+            padding-right: 15px;
+        }
+
+        .m-body {
+            width: 100%;
         }
 
         /* tab标签 */
@@ -102,19 +111,13 @@
             color: #fff !important;
         }
 
-        .left-panel {
-            width: 165px;
-            padding-right: 15px;
-        }
-
         /* 边栏样式 */
         .aside {
             position: sticky;
             top: 140px;
-            padding: 7px;
+            padding: 10px;
             border-radius: 4px;
             border: 1px solid #a2a9b1;
-            background-color: #0002;
             font-size: 16px;
             font-weight: 500;
         }
@@ -148,7 +151,6 @@
         /* 主体样式 */
         .map,
         .about {
-            width: 870px;
             padding: 0 1.5em 1.5em 1.5em;
             border-radius: 2px;
             border: 1px solid #fff6;
@@ -208,6 +210,12 @@
             background: rgba(0, 0, 0, 0.3);
             margin: 12px;
             max-width: 350px;
+        }
+
+        .indexgroup figure .mask {
+            background-color: rgba(255, 255, 255, .2);
+            border-radius: 8px;
+            border: 2px solid grey;
         }
 
         .indexgroup figcaption {
@@ -273,7 +281,7 @@
 
         .regionlist-group {
             width: 828px;
-            margin: 0 15px;
+            margin: auto;
         }
 
         /* expando list, flex that needs wrap on really small displays */
@@ -484,7 +492,7 @@
                                             <figure>
                                                 <img src="./resources/icons/63_none.png" />
                                                 <figcaption>无</figcaption>
-                                                <content>用于没有生物生成</content>
+                                                <content>用于无生物生成</content>
                                             </figure>
                                             <figure>
                                                 <img src="./resources/icons/60_randomitems_inactive.png" />
@@ -1104,7 +1112,9 @@
                                                 </table>
                                             </figure>
                                             <figure>
-                                                <img src="./resources/icons/Sofanthiel_icon.png" />
+                                                <div class="mask">
+                                                    <img src="./resources/icons/Sofanthiel_icon.png" />
+                                                </div>
                                                 <figcaption>Sofanthiel / Inv / ???</figcaption>
                                                 <content>谢了，安德鲁。<br>
                                                     ？？？——被玩家们称作彩蛋猫或怪猫,是一只不属于官方设定的、DLC倾盆大雨中加入的隐藏蛞蝓猫。Meme难度 -
@@ -1161,6 +1171,69 @@
                                                     <tr>
                                                         <td>潜行能力</td>
                                                         <td>0.5</td>
+                                                    </tr>
+                                                </table>
+                                            </figure>
+                                            <figure>
+                                                <div class="mask">
+                                                    <img src="./resources/icons/66_nightcat.png" />
+                                                </div>
+                                                <figcaption>守望者 / 夜猫</figcaption>
+                                                <content>
+                                                    在1.5至1.9版本中，夜猫没有属于自己的流程，并且只在竞技场模式中出现。由于DLC更多蛞蝓猫扩展包对竞技场角色的修改，加载扩展包后夜猫不会再竞技场模式中出现。竞技场模式中，夜猫没有特殊能力，数值上与求生者相同，外表为蓝黑色，有着白色的眼睛与鼻子。
+                                                </content>
+                                                <table>
+                                                    <tr>
+                                                        <td>初始房间</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>初始业力 (最大)</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>以沟通标记开头</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>撕咬能力</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>每次冬眠的食物 (最大)</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>饮食</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>肺活量</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>长矛伤害</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>移动速度</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>体重</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>行动响度</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>可见性修正</td>
+                                                        <td>*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>潜行能力</td>
+                                                        <td>*</td>
                                                     </tr>
                                                 </table>
                                             </figure>
@@ -3277,8 +3350,8 @@
 
             <div id="footer"> <a href="https://gitee.com/rain-world-map/" target="_blank">Gitee</a> 上的代码 |
                 图标和样式来自于
-                <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans" target="_blank">雨世界wiki</a> | 此页面由
-                <a href="https://github.com/xiowo/" target="_blank">Mo</a> 制作 | <a
+                <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki/zh-hans" target="_blank">雨世界wiki</a> | 由
+                <a href="https://github.com/xiowo/" target="_blank">MortalCat</a> 修改 | <a
                     href="https://store.steampowered.com/app/312520/Rain_World/" target="_blank">雨世界</a> 是 <a
                     href="https://twitter.com/VideocultMedia" target="_blank">Videocult</a> 的财产
             </div>
